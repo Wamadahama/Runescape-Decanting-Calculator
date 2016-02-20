@@ -78,21 +78,19 @@ potion_data* decant_potion(potion_data* data) {
   printf("Full potion count %i\n", full_potion_count );
 
   if (remaining == 1) {
-    return_data->one_count = remaining;
+    return_data->one_count = 1;
   } else {
     return_data->one_count = 0;
   }
 
-  if (remaining % 2 > 0){
-    return_data->two_count = remaining / 2;
-    remaining -= remaining % 2;
+  if (remaining == 2){
+    return_data->two_count = 1;
   } else {
     return_data->two_count = 0;
   }
 
-  if (remaining % 3 > 0) {
-    return_data->three_count = remaining / 3;
-    remaining -= remaining % 3;
+  if (remaining == 3) {
+    return_data->three_count = 1;
   }
   else{
     return_data->three_count = 0;
