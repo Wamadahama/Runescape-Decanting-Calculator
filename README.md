@@ -1,13 +1,30 @@
 # Runescape decanting calculator
 
 ## Description
-A decanting calculator to evaluate 
+A calculator to evaluate Runescape potion decantments
 
-## Dependencies
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+For example
+
+3 1/4th potions == 3/4ths of a potion
+
+900 3/th potions = 675 4/4th potions  
+
+## Requirements
+
+### Linux
+make
+
+### Windows
+cc/gcc via mingw or equivalent
 
 ## Setup
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-## Usage
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+### Linux
+make steps
+
+### Windows (w/o make)
+```
+git clone https://github.com/Wamadahama/Runescape-Decanting-Calculator.git
+cd Runescape-Decanting-Calculator/
+cc -std=c99 src\Decanter.c -o decanter  
+```
