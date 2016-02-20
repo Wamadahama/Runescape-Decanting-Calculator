@@ -8,6 +8,14 @@ config.sub
 configure
 depcomp
 install-sh
+config.h
+config.h.in
+configure.ac
+depcomp
+install-sh
+Makefile.am
+missing
+stamp-h1
 Makefile
 Makefile.in
 # Object files
