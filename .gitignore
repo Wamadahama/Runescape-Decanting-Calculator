@@ -1,4 +1,5 @@
 aclocal.m4
+*.po
 ag
 autom4te.cach
 compile
