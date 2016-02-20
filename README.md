@@ -21,11 +21,9 @@ cc/gcc via mingw or equivalent
 Use prexisting binaries in ```bin ```
 ### Linux
 ```
-https://github.com/Wamadahama/Runescape-Decanting-Calculator.git
+git clone https://github.com/Wamadahama/Runescape-Decanting-Calculator.git
 cd ./Runescape-Decanting-Calculator
-./configure
-make
-make install
+sh install.sh
  ```
 ### Windows
 ```
