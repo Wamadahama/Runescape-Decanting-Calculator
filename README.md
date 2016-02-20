@@ -12,7 +12,7 @@ For example
 ## Requirements
 
 ### Linux
-automake tools
+automake build tools
 
 ### Windows
 cc/gcc via mingw or equivalent
@@ -23,8 +23,11 @@ Use prexisting binaries in ```bin ```
 ```
 https://github.com/Wamadahama/Runescape-Decanting-Calculator.git
 cd ./Runescape-Decanting-Calculator
-./configure ```
-### Windows (w/o make)
+./configure
+make
+make install
+ ```
+### Windows
 ```
 git clone https://github.com/Wamadahama/Runescape-Decanting-Calculator.git
 cd Runescape-Decanting-Calculator/
