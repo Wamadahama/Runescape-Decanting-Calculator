@@ -1,0 +1,12 @@
+aclocal.m4
+ag
+autom4te.cach
+compile
+config.log
+config.status
+config.sub
+configure
+depcomp
+install-sh
+Makefile
+Makefile.in
