@@ -2,8 +2,8 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT(rscanter, 1.0 ,elijahhhellis@gmail.com)
-AM_INIT_AUTOMAKE(rscanter,1.0)
+AC_INIT(rscanter, 1.0, elijahhhellis@gmail.com)
+AM_INIT_AUTOMAKE(rscanter, 1.0)
 AC_CONFIG_SRCDIR([src/Decanter.c])
 AC_CONFIG_HEADERS([config.h])
 
