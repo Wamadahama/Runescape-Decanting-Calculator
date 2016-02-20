@@ -1,5 +1,4 @@
 aclocal.m4
-*.po
 ag
 autom4te.cach
 compile
@@ -43,3 +42,5 @@ Makefile.in
 
 # Debug files
 *.dSYM/
+
+Decanter.Po
