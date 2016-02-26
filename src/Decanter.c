@@ -4,8 +4,8 @@
 
 #include "Decanter.h"
 
+/* Used to get the user input */
 static char buffer[2048];
-
 char* readline(char* prompt){
   fputs(prompt, stdout);
   fgets(buffer, 2048, stdin);
@@ -15,8 +15,9 @@ char* readline(char* prompt){
   return cpy;
 }
 
-enum { ONE_FORTH, HALF, THREE_FORTH, FULL};
+/* enum { ONE_FORTH, HALF, THREE_FORTH, FULL}; */
 
+/* Fills a potion_data struct based on user input */
 potion_data* get_potion_data(){
 
     potion_data* user_input = malloc(sizeof(potion_data));
@@ -45,25 +46,20 @@ potion_data* get_potion_data(){
     total += user_input->four_count;
 
     user_input->total = total;
-
-    // puts("[------ DEBUG ------]");
-    // print_potion_data(user_input);
-    // puts("[-------------------]");
     return user_input;
 }
 
 potion_data* decant_potion(potion_data* data) {
+  
+  potion_data* return_data = malloc(sizeof(potion_data));
+  
   /* Get the total ammount of doses */
   int dose_count = 0;
-
-  potion_data* return_data = malloc(sizeof(potion_data));
-
+  
   dose_count += (data->four_count * 4);
   dose_count += (data->three_count * 3);
   dose_count += (data->two_count * 2);
   dose_count += (data->one_count);
-
-  printf("Total number of doses: %i\n", dose_count);
 
   /*
    Get the total ammount of full potions and then fill in what remains
@@ -75,8 +71,19 @@ potion_data* decant_potion(potion_data* data) {
   int remaining;
   remaining = dose_count % 4;
 
-  printf("Full potion count %i\n", full_potion_count );
-
+  /*
+    There is only ever going to be one potion that isn't full after a decanting, for example
+    903 (3) Potions are always going to be 675 (4) and 1 (3). But there is never a case where there will be something like:
+    
+   (4) : 25
+   (3) : 0
+   (2) : 1
+   (1) : 1
+   
+   Because the (2) and the (1) would combine to make a (3), with this we can observe that every combination will have n 
+   amount of potions(4) and one potion that is either (1), (2), or (3)
+  */
+  
   if (remaining == 1) {
     return_data->one_count = 1;
   } else {
@@ -95,11 +102,15 @@ potion_data* decant_potion(potion_data* data) {
   else{
     return_data->three_count = 0;
   }
-
+  
+  /* Print exit information*/
+  printf("Full potion count %i\n", full_potion_count );
+  printf("Total number of doses: %i\n", dose_count);
 
   return return_data;
 }
 
+/* Print out the potion_data structure  */
 void print_potion_data(potion_data* data){
   printf("1/4 potions: %i\n", data->one_count);
   printf("2/4 potions: %i\n", data->two_count);
