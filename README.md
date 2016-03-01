@@ -24,10 +24,12 @@ Use prexisting binaries in ```bin ```
 git clone https://github.com/Wamadahama/Runescape-Decanting-Calculator.git
 cd ./Runescape-Decanting-Calculator
 sh install.sh
+rscanter
  ```
 ### Windows
 ```
 git clone https://github.com/Wamadahama/Runescape-Decanting-Calculator.git
 cd Runescape-Decanting-Calculator/
-cc -std=c99 src/Decanter.c -o bin/decanter  
+cc -std=c99 src/Decanter.c -o bin/decanter
+bin/decanter.exe
 ```
