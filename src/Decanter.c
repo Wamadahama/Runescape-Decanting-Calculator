@@ -15,8 +15,6 @@ char* readline(char* prompt){
   return cpy;
 }
 
-/* enum { ONE_FORTH, HALF, THREE_FORTH, FULL}; */
-
 /* Fills a potion_data struct based on user input */
 potion_data* get_potion_data(){
 
