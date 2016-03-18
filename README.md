@@ -24,6 +24,8 @@ Use prexisting binaries in ```bin ```
 git clone https://github.com/Wamadahama/Runescape-Decanting-Calculator.git
 cd ./Runescape-Decanting-Calculator
 sh install.sh
+"mv: cannot move 'rscanter' to '/usr/local/bin/rscanter': Permission denied
+sudo !!
 rscanter
  ```
 ### Windows
